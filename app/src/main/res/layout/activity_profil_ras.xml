@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
+    android:background="#fff"
     tools:context=".MainActivity">
 
     <TextView
@@ -33,6 +34,13 @@
         android:id="@+id/txJenis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        />
+    <TextView
+        android:id="@+id/txRas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Jenis Hewan"
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="17sp"
@@ -41,6 +49,7 @@
         android:id="@+id/txAsal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:textStyle="italic"
         android:text="Asal" />
     <TextView
@@ -48,6 +57,7 @@
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:gravity="center"
         android:text="Deskripsi hewan" />
 

@@ -20,7 +20,7 @@ public class GaleriActivity extends AppCompatActivity {
     int indeksTampil = 0;
     String jenisHewan;
     Button btnPertama,btnTerakhir,btnSebelumnya,btnBerikutnya;
-    TextView txJenis,txAsal,txDeskripsi,txJudul;
+    TextView txJenis,txRas,txAsal,txDeskripsi,txJudul;
     ImageView ivFotoHewan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +45,13 @@ public class GaleriActivity extends AppCompatActivity {
         btnBerikutnya.setOnClickListener(view -> hewanBerikutnya());
 
         txJenis = findViewById(R.id.txJenis);
+        txRas = findViewById(R.id.txRas);
         txAsal = findViewById(R.id.txAsal);
         txDeskripsi = findViewById(R.id.txDeskripsi);
         ivFotoHewan = findViewById(R.id.gambarHewan);
 
         txJudul = findViewById(R.id.txJudul);
-        txJudul.setText("Berbagai Macam Ras "+jenisHewan);
+        txJudul.setText("Ras "+jenisHewan);
     }
 
 
@@ -58,6 +59,7 @@ public class GaleriActivity extends AppCompatActivity {
         Hewan k = hewans.get(indeksTampil);
         Log.d("ANJING","Menampilkan anjing "+k.getJenis());
         txJenis.setText(k.getJenis());
+        txRas.setText(k.getRas());
         txAsal.setText(k.getAsal());
         txDeskripsi.setText(k.getDeskripsi());
         ivFotoHewan.setImageDrawable(this.getDrawable(k.getDrawableRes()));

@@ -8,12 +8,13 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
+    android:background="#fff"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kucing &amp; Anjing Pedia"
+        android:text="Kucing Anjing &amp; Ular Pedia"
         android:textStyle="bold"
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="29sp"
@@ -32,6 +33,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="150dp"
+            android:background="#c7c7c7"
             android:src="@drawable/cat_angora"
             android:scaleType="fitCenter"
             />
@@ -42,7 +44,19 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="150dp"
+            android:background="#c7c7c7"
             android:src="@drawable/dog_kintamani"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/btn_buka_ras_ular"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="150dp"
+            android:background="#c7c7c7"
+            android:src="@drawable/ular_hijau_mira"
             android:scaleType="fitCenter"
             />
     </LinearLayout>
@@ -50,6 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="(Tekan gambar untuk membuka galeri)"
         android:textStyle="italic"
         android:layout_marginBottom="32dp"

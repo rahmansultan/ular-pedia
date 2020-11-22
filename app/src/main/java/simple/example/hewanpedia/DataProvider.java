@@ -8,6 +8,7 @@ import java.util.List;
 import simple.example.hewanpedia.model.Anjing;
 import simple.example.hewanpedia.model.Hewan;
 import simple.example.hewanpedia.model.Kucing;
+import simple.example.hewanpedia.model.Ular;
 
 public class DataProvider {
     private static List<Hewan> hewans = new ArrayList<>();
@@ -45,10 +46,23 @@ public class DataProvider {
                 "Anjing dari daerah Shiba ini gesit dan lincah sehingga awalnya banyak digunakan untuk berburu ", R.drawable.dog_shiba));
         return anjings;
     }
+    private static List<Ular> initDataUlar(Context ctx) {
+        List<Ular> ulars = new ArrayList<>();
+        ulars.add(new Ular("Ular Cabe Merah", "Afrika",
+                "Ular ini gampang banget dikenali yaitu dari pola kulitnya yang belang belang-belang berwarna hitam dan merah. Ukurannya lumayan kecil, paling panjang maksimal hanya sekitar 50 cm jadi lo harus hati-hati dan jeli untuk melihat lingkungan sekitar.", R.drawable.ular_cabe));
+        ulars.add(new Ular("Ular Welang", "Selandia Baru",
+                ". Ular welang atau banded snake juga memiliki pola kulit yang belang-belang. Belangnya biasanya berwarna kuning-hitam dengan panjang ular bisa sampai 1 hingga 2 meter. Ular welang ini biasanya ngumpet di sawah atau diantara pohon bambu.", R.drawable.ular_welang));
+        ulars.add(new Ular("Ular Cobra", "India",
+                "Ular kobra termasuk jenis ular yang paling berbisa di dunia. Kobra bisa hidup di persawahan hingga ke permukiman semi-urban. Lo pasti tahu bentuknya kobra kayak apa karena gampang banget dengan ciri khas kepalanya yang bisa mengembang seperti sendok.", R.drawable.ular_kobra));
+        ulars.add(new Ular("Ular Hijau Mira", "Amerika Selatan",
+                "Walau tidak memiliki bisa atau racun yang mematikan, namun lilitan kuat dari Ular Sanca Keling bisa mematahkan tulang-tulang lo dengan sekejap. Oleh karena itu, ular ini memang patut diwaspadai saat berada di alam bebas", R.drawable.ular_hijau_mira));
+        return ulars;
+    }
 
     private static void initAllHewans(Context ctx) {
         hewans.addAll(initDataKucing(ctx));
         hewans.addAll(initDataAnjing(ctx));
+        hewans.addAll(initDataUlar(ctx));
     }
 
     public static List<Hewan> getAllHewan(Context ctx) {
